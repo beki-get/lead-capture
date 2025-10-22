@@ -4,13 +4,13 @@ import { useSession } from 'next-auth/react';
 export default function Pricing() {
   const { data: session } = useSession();
 
-  const handleCheckout = async (priceId) => {
+  const handleCheckout = async (priceId, planName) => {
     if (!session) return alert("Please login first.");
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ priceId, userEmail: session.user.email }),
+        body: JSON.stringify({ priceId, userEmail: session.user.email, planName }),
       });
     if (!res.ok) {
       const text = await res.text();
@@ -41,7 +41,7 @@ export default function Pricing() {
             <h2 className="text-xl font-semibold mb-2">{plan.name}</h2>
             <p className="text-gray-600 mb-4">{plan.price}</p>
             <button
-              onClick={() => handleCheckout(plan.id)}
+              onClick={() => handleCheckout(plan.id, plan.name)}
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
             >
               Subscribe
