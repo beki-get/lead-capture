@@ -10,10 +10,6 @@ export async function POST(request) {
 
   const session = await getServerSession(authOptions);
   const data = await request.json();
-  
-  if (client.plan === 'Free' && clientLeadCount >= 10) {
-  return NextResponse.json({ error: 'Lead limit reached. Upgrade your plan.' }, { status: 403 });
-}
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -29,7 +25,6 @@ export async function POST(request) {
       userEmail: session.user.email,
       status: 'pending',
       createdAt: new Date().toISOString(),
-      
     });
     return NextResponse.json({ success: true });
     // Send notification email
@@ -66,5 +61,18 @@ export async function GET() {
     return NextResponse.json(leads);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch leads.' }, { status: 500 });
+  }
+}
+export async function PUT(req, { params }) {
+  const { id } = params;
+  const { status } = await req.json();
+
+  try {
+    const leadRef = doc(db, 'leads', id);
+    await updateDoc(leadRef, { status });
+    return new Response(JSON.stringify({ success: true }), { status: 200 });
+  } catch (error) {
+    console.error('Error updating status:', error);
+    return new Response(JSON.stringify({ error: 'Failed to update status' }), { status: 500 });
   }
 }
