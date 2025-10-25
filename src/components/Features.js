@@ -3,7 +3,7 @@ import { Card, CardContent } from './ui/card';
 
 export default function Features() {
   return (
-    <div id="features" className="bg-gray-900 py-24 sm:py-32">
+    <div id="features" className="bg-gray-950 py-10 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-indigo-400">Powerful Lead Management</h2>
@@ -12,7 +12,7 @@ export default function Features() {
           </p>
           <p className="mt-6 text-lg/8 text-gray-300">
             LeadGenly gives you all the tools to collect leads, monitor performance, and grow your
-            business — without writing a single line of code.
+            business without writing a single line of code.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function Features() {
                 Real-time Analytics
               </dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Track every form submission with detailed insights — source, location, and conversion
+                Track every form submission with detailed insights source, location, and conversion
                 performance all in one dashboard.
               </dd>
             </div>
@@ -65,7 +65,7 @@ export default function Features() {
                 Smart Notifications
               </dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Get notified instantly when a new lead comes in — via email or your dashboard, so
+                Get notified instantly when a new lead comes in via email or your dashboard, so
                 you can respond faster and close more deals.
               </dd>
             </div>
@@ -83,7 +83,7 @@ export default function Features() {
               </dt>
               <dd className="mt-2 text-base/7 text-gray-400">
                 Your leads are protected with bank-grade encryption and backed by secure Firebase
-                storage — privacy you can trust.
+                storage privacy you can trust.
               </dd>
             </div>
 

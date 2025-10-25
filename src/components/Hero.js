@@ -4,17 +4,13 @@ import { useState } from 'react';
 
 export default function Hero() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-950">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">LeadGenly</span>
-              <img
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="LeadGenly Logo"
-                className="h-8 w-auto"
-              />
+              
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -48,7 +44,7 @@ export default function Hero() {
             <a href="#pricing" className="text-sm/6 font-semibold text-white">
               Pricing
             </a>
-            <a href="#embed" className="text-sm/6 font-semibold text-white">
+            <a href="/embed" className="text-sm/6 font-semibold text-white">
               Embed Form
             </a>
             <a href="#contact" className="text-sm/6 font-semibold text-white">
@@ -56,7 +52,7 @@ export default function Hero() {
             </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="/login" className="text-sm/6 font-semibold text-white">
+            <a href="/auth/signin" className="text-sm/6 font-semibold text-white">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -70,11 +66,7 @@ export default function Hero() {
                 <div className="flex items-center justify-between">
                   <a href="#" className="-m-1.5 p-1.5">
                     <span className="sr-only">LeadGenly</span>
-                    <img
-                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                      alt="LeadGenly Logo"
-                      className="h-8 w-auto"
-                    />
+                    
                   </a>
                   <button
                     type="button"
@@ -108,7 +100,7 @@ export default function Hero() {
                       <a href="#contact" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Support</a>
                     </div>
                     <div className="py-6">
-                      <a href="/login" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log in</a>
+                      <a href="/auth/signin" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log in</a>
                     </div>
                   </div>
                 </div>
@@ -132,11 +124,11 @@ export default function Hero() {
           ></div>
         </div>
 
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-20">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
               Now with Embed Support — Add your form anywhere!{' '}
-              <a href="#embed" className="font-semibold text-indigo-400">
+              <a href="/embed" className="font-semibold text-indigo-400">
                 <span aria-hidden="true" className="absolute inset-0"></span>See how <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
@@ -151,14 +143,12 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/signup"
+                href="/auth/signup"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Get Started Free
               </a>
-              <a href="#demo" className="text-sm/6 font-semibold text-white">
-                Watch Demo <span aria-hidden="true">→</span>
-              </a>
+             
             </div>
           </div>
         </div>
