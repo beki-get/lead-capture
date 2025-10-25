@@ -1,8 +1,14 @@
-// src/app/api/subscription/route.js
+/////// src/app/api/subscription/route.js
 import { query, collection, where, getDocs } from 'firebase/firestore';
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+
+// Same mapping for consistency
+const priceToName = {
+  'price_1SKfmOGksStpzN2UNIJt8VUt': 'Pro',
+  'price_1SKfmX...': 'Business',
+  'price_1SKfmY...': 'Free',
+};
 
 export async function GET(req) {
   try {
@@ -14,16 +20,22 @@ export async function GET(req) {
     }
 
     const q = query(collection(db, "users"), where("email", "==", userEmail));
-const snapshot = await getDocs(q);
+    const snapshot = await getDocs(q);
 
-if (snapshot.empty) {
-    return NextResponse.json({ subscription: null });
-}
+    if (snapshot.empty) {
+        return NextResponse.json({ subscription: null });
+    }
 
     const userData = snapshot.docs[0].data();
 
+    // Convert price ID to plan name if needed
+    let planName = userData.plan || 'Free';
+    if (planName.startsWith('price_')) {
+      planName = priceToName[planName] || 'Free';
+    }
+
     const subscription = {
-      planName: userData.plan || 'Free',
+      planName: planName,
       status: userData.planStatus || 'inactive',
       updatedAt: userData.updatedAt || null,
     };
