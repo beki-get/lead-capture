@@ -39,7 +39,7 @@ export const authOptions = {
     }),
   ],
   session: { strategy: "jwt" },
-  pages: { signIn: "/auth/loginPage" },
+  pages: { signIn: "/auth/signin" },
   callbacks: {
     async jwt({ token, user }) {
       if (user)  token.role = user.role ;

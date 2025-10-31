@@ -10,3 +10,4 @@ export default function EmbedFormPage({ searchParams }) {
     </div>
   );
 }
+//https://yourapp.com/embed-form?userEmail=client@gmail.com
