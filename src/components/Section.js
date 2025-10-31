@@ -8,7 +8,7 @@ return(
       See How Our Dashboard Empowers You
     </h2>
     <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-      Get a complete overview of your business performance in one place — 
+      Get a complete overview of your business performance in one place 
       track leads, manage billing, export reports, and unlock insights 
       that drive real growth.
     </p>
@@ -40,7 +40,7 @@ return(
           Simple Billing Control
         </h3>
         <p className="text-gray-600 text-sm">
-          Manage subscriptions, invoices, and upgrade your plan — all in one 
+          Manage subscriptions, invoices, and upgrade your plan all in one 
           intuitive dashboard.
         </p>
       </div>
@@ -68,7 +68,7 @@ return(
       </h3>
       <p className="text-gray-600 max-w-2xl mx-auto">
         AI-powered insights, lead scoring, automated follow-ups, 
-        and marketing campaign tracking — all built to help you 
+        and marketing campaign tracking all built to help you 
         convert more efficiently.
       </p>
     </div>

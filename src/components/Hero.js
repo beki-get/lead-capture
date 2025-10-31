@@ -127,7 +127,7 @@ export default function Hero() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-20">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              Now with Embed Support — Add your form anywhere!{' '}
+              Now with Embed Support - Add your form anywhere!{' '}
               <a href="/embed" className="font-semibold text-indigo-400">
                 <span aria-hidden="true" className="absolute inset-0"></span>See how <span aria-hidden="true">&rarr;</span>
               </a>
@@ -139,7 +139,7 @@ export default function Hero() {
               Capture more leads, automatically.
             </h1>
             <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-              LeadGenly helps you turn website visitors into paying customers — easily embed your form, collect leads, and track performance in one dashboard.
+              LeadGenly helps you turn website visitors into paying customers easily embed your form, collect leads, and track performance in one dashboard.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
