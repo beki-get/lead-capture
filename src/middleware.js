@@ -1,6 +1,5 @@
 /* This function used as intercepting every request before reaching the main business logic(pages,routes)
 
-
 */
 
 import { createServerClient } from '@supabase/ssr';
@@ -9,7 +8,7 @@ import { NextResponse } from 'next/server';
 export async function middleware(request) {
      let response = NextResponse.next({request});
      const supabaseUrl=process.env.NEXT_PUBLIC_SUPABASE_URL
-     const supabaseAnonKey=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+     const supabaseAnonKey=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
 
      if(!supabaseUrl || !supabaseAnonKey){
        console.error('Supabase environment variables missing in middleware; skipping session refresh.');
